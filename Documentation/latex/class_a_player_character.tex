@@ -1,0 +1,120 @@
+\doxysection{APlayer\+Character Class Reference}
+\hypertarget{class_a_player_character}{}\label{class_a_player_character}\index{APlayerCharacter@{APlayerCharacter}}
+Inheritance diagram for APlayer\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_a_player_character}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_acb0975f88ccf4fddac60659b04087e9d}{Death}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+const UAnim\+Montage \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_base_character_afd71d366d9d67c346ba0c4c8935e2c4f}{Get\+Montage\+Attack}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}{Setup\+Player\+Input\+Component}} (class UInput\+Component \texorpdfstring{$\ast$}{*}Player\+Input\+Component) override
+\item 
+void \mbox{\hyperlink{class_a_player_character_ad97c172553c15895cffd3b4d7bcb8bd8}{Move}} (const FInput\+Action\+Value \&Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_player_character_aed1eceb8d8f80d51090eb1123599f0f5}\label{class_a_player_character_aed1eceb8d8f80d51090eb1123599f0f5} 
+TObject\+Ptr$<$ USphere\+Component $>$ {\bfseries Attack\+Sphere}
+\item 
+\Hypertarget{class_a_player_character_ad8ed04e985432480a050e7a3d2a720cd}\label{class_a_player_character_ad8ed04e985432480a050e7a3d2a720cd} 
+TObject\+Ptr$<$ USpring\+Arm\+Component $>$ {\bfseries Spring\+Arm\+Component}
+\item 
+\Hypertarget{class_a_player_character_a98ee5ab5793e92c8c4452fa70e4352fc}\label{class_a_player_character_a98ee5ab5793e92c8c4452fa70e4352fc} 
+TObject\+Ptr$<$ UCamera\+Component $>$ {\bfseries Toggle\+Camera}
+\item 
+\Hypertarget{class_a_player_character_a1703f9ca8117ca1ffbf8723efe0b105e}\label{class_a_player_character_a1703f9ca8117ca1ffbf8723efe0b105e} 
+TObject\+Ptr$<$ UCamera\+Component $>$ {\bfseries Game\+Camera}
+\item 
+\Hypertarget{class_a_player_character_a3f321eb86151d759fc17f4f8ac644d8e}\label{class_a_player_character_a3f321eb86151d759fc17f4f8ac644d8e} 
+TObject\+Ptr$<$ UWidget\+Component $>$ {\bfseries Health\+Widget\+Component}
+\item 
+\Hypertarget{class_a_player_character_ade475e6af9f3c18509bd7251a60808cf}\label{class_a_player_character_ade475e6af9f3c18509bd7251a60808cf} 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_experience_component}{UExperience\+Component}} $>$ {\bfseries Experience\+Component}
+\item 
+\Hypertarget{class_a_player_character_a4053a218f9ebb0fdba68b17217a7985d}\label{class_a_player_character_a4053a218f9ebb0fdba68b17217a7985d} 
+TObject\+Ptr$<$ UInput\+Mapping\+Context $>$ {\bfseries Mapping\+Context}
+\item 
+\Hypertarget{class_a_player_character_a5d2076f52ea0e79ab0c34daf99990247}\label{class_a_player_character_a5d2076f52ea0e79ab0c34daf99990247} 
+TObject\+Ptr$<$ UInput\+Action $>$ {\bfseries Move\+Action}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_health_component}{UHealth\+Component}} $>$ {\bfseries Health\+Component}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_weapon_component}{UWeapon\+Component}} $>$ {\bfseries Weapon\+Component}
+\item 
+float {\bfseries Material\+Change\+Rate}
+\item 
+float {\bfseries Total\+Time\+Material\+Change}
+\item 
+TArray$<$ TObject\+Ptr$<$ UAnim\+Montage $>$ $>$ {\bfseries Montages\+Death}
+\item 
+TObject\+Ptr$<$ UAnim\+Montage $>$ {\bfseries Montage\+Attack}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}\index{APlayerCharacter@{APlayerCharacter}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_player_character_aabd1d46483746c34c35da55d816d22f3} 
+void APlayer\+Character\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}.
+
+\Hypertarget{class_a_player_character_acb0975f88ccf4fddac60659b04087e9d}\index{APlayerCharacter@{APlayerCharacter}!Death@{Death}}
+\index{Death@{Death}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Death()}{Death()}}
+{\footnotesize\ttfamily \label{class_a_player_character_acb0975f88ccf4fddac60659b04087e9d} 
+void APlayer\+Character\+::\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Ñauses the player character to die 
+
+Reimplemented from \mbox{\hyperlink{class_a_base_character_ac310d9cd8d6dd5603a7282e2d9fb385e}{ABase\+Character}}.
+
+\Hypertarget{class_a_player_character_ad97c172553c15895cffd3b4d7bcb8bd8}\index{APlayerCharacter@{APlayerCharacter}!Move@{Move}}
+\index{Move@{Move}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \label{class_a_player_character_ad97c172553c15895cffd3b4d7bcb8bd8} 
+void APlayer\+Character\+::\+Move (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Default func form move character 
+\begin{DoxyParams}{Parameters}
+{\em expect} & value for move char \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}\index{APlayerCharacter@{APlayerCharacter}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{SetupPlayerInputComponent()}{SetupPlayerInputComponent()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1} 
+void APlayer\+Character\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class UInput\+Component \texorpdfstring{$\ast$}{*}}]{Player\+Input\+Component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Bind input func for Player\+Input\+Component 
+\begin{DoxyParams}{Parameters}
+{\em expect} & Player\+Input\+Component for bind input func \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Characters/Player\+Character.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Characters/Player\+Character.\+cpp\end{DoxyCompactItemize}

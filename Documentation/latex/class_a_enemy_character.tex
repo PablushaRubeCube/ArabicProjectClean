@@ -1,0 +1,76 @@
+\doxysection{AEnemy\+Character Class Reference}
+\hypertarget{class_a_enemy_character}{}\label{class_a_enemy_character}\index{AEnemyCharacter@{AEnemyCharacter}}
+Inheritance diagram for AEnemy\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_enemy_character}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_enemy_character_a7ab310dd965cdc118474be134b61dc60}{Death}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+const UAnim\+Montage \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_base_character_afd71d366d9d67c346ba0c4c8935e2c4f}{Get\+Montage\+Attack}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_enemy_character_af3a436a3ffcdd6a1e87c0e32330d133c}{Begin\+Play}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_enemy_character_a0cb36ea20c07130e9a59f6ae90ae1c4a}\label{class_a_enemy_character_a0cb36ea20c07130e9a59f6ae90ae1c4a} 
+FVector2D {\bfseries Random\+Max\+Speed\+Range}
+\item 
+\Hypertarget{class_a_enemy_character_ae0a90de30063ca795ad67c9834b3b720}\label{class_a_enemy_character_ae0a90de30063ca795ad67c9834b3b720} 
+TMap$<$ TSubclass\+Of$<$ \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}} $>$, float $>$ {\bfseries Item\+To\+Drops}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_health_component}{UHealth\+Component}} $>$ {\bfseries Health\+Component}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_weapon_component}{UWeapon\+Component}} $>$ {\bfseries Weapon\+Component}
+\item 
+float {\bfseries Material\+Change\+Rate}
+\item 
+float {\bfseries Total\+Time\+Material\+Change}
+\item 
+TArray$<$ TObject\+Ptr$<$ UAnim\+Montage $>$ $>$ {\bfseries Montages\+Death}
+\item 
+TObject\+Ptr$<$ UAnim\+Montage $>$ {\bfseries Montage\+Attack}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_enemy_character_af3a436a3ffcdd6a1e87c0e32330d133c}\index{AEnemyCharacter@{AEnemyCharacter}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AEnemyCharacter@{AEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_enemy_character_af3a436a3ffcdd6a1e87c0e32330d133c} 
+void AEnemy\+Character\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_base_character}{ABase\+Character}}.
+
+\Hypertarget{class_a_enemy_character_a7ab310dd965cdc118474be134b61dc60}\index{AEnemyCharacter@{AEnemyCharacter}!Death@{Death}}
+\index{Death@{Death}!AEnemyCharacter@{AEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{Death()}{Death()}}
+{\footnotesize\ttfamily \label{class_a_enemy_character_a7ab310dd965cdc118474be134b61dc60} 
+void AEnemy\+Character\+::\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Ñauses the AI enemy to die 
+
+Reimplemented from \mbox{\hyperlink{class_a_base_character_ac310d9cd8d6dd5603a7282e2d9fb385e}{ABase\+Character}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Characters/\+Enemy/Enemy\+Character.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Characters/\+Enemy/Enemy\+Character.\+cpp\end{DoxyCompactItemize}

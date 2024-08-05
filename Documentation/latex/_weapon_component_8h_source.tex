@@ -1,0 +1,43 @@
+\doxysection{Weapon\+Component.\+h}
+\hypertarget{_weapon_component_8h_source}{}\label{_weapon_component_8h_source}\index{Source/ChibaChaba/Public/Components/WeaponComponent.h@{Source/ChibaChaba/Public/Components/WeaponComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Components/ActorComponent.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WeaponComponent.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS(ClassGroup\ =\ (Custom),\ meta\ =\ (BlueprintSpawnableComponent))}
+\DoxyCodeLine{00012\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_u_weapon_component}{UWeaponComponent}}\ :\ public\ UActorComponent}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ component's\ properties}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_u_weapon_component}{UWeaponComponent}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ AddWeapon(TSubclassOf<ABaseWeapon>\ WeaponToSpawn);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ TArray<const\ ABaseWeapon*>\ GetAddedWeapons()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00033\ \ \ \ \ TSubclassOf<ABaseWeapon>\ StartWeapon;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ TArray<TObjectPtr<ABaseWeapon>>\ AddedWeapons;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ game\ starts}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}}*\ SpawnWeapon(TSubclassOf<ABaseWeapon>\ WeaponToSpawn)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ AttachWeapon(\mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}}*\ WeaponToAttach);}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

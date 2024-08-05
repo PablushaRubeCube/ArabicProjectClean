@@ -1,0 +1,90 @@
+\doxysection{AItem\+\_\+\+Experience Class Reference}
+\hypertarget{class_a_item___experience}{}\label{class_a_item___experience}\index{AItem\_Experience@{AItem\_Experience}}
+Inheritance diagram for AItem\+\_\+\+Experience\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_a_item___experience}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_item___experience_abed5f077bbb91a0c2d2449d087cfd679}{Get\+Experience}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_item___experience_a4056bc449a9bee32e17264c974efd474}{On\+Sphere\+Begin\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result) override
+\item 
+virtual void \mbox{\hyperlink{class_a_item___experience_ac2212a051bc2b04bdfdfb52f88573588}{Finish\+Action}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_item___pickup_a50c434eea1684cdd7df1943ce497b5b0}{Begin\+Play}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_item___experience_a86bcb189a83c71371277dc0a4a0a20c3}\label{class_a_item___experience_a86bcb189a83c71371277dc0a4a0a20c3} 
+float {\bfseries Experience}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}}}
+\begin{DoxyCompactItemize}
+\item 
+FTimer\+Handle {\bfseries Timer\+Handle}
+\item 
+float {\bfseries Timer\+Rate}
+\item 
+TObject\+Ptr$<$ UCurve\+Float $>$ {\bfseries Move\+Item\+Curve}
+\item 
+float {\bfseries Total\+Time\+Move}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} $>$ {\bfseries Player\+Char}
+\item 
+TObject\+Ptr$<$ USphere\+Component $>$ {\bfseries Overlap\+Sphere}
+\item 
+TObject\+Ptr$<$ UNiagara\+Component $>$ {\bfseries Niagara\+Pickup}
+\item 
+TObject\+Ptr$<$ UNiagara\+System $>$ {\bfseries Overlap\+Particle}
+\item 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Pickup\+Sound}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_item___experience_ac2212a051bc2b04bdfdfb52f88573588}\index{AItem\_Experience@{AItem\_Experience}!FinishAction@{FinishAction}}
+\index{FinishAction@{FinishAction}!AItem\_Experience@{AItem\_Experience}}
+\doxysubsubsection{\texorpdfstring{FinishAction()}{FinishAction()}}
+{\footnotesize\ttfamily \label{class_a_item___experience_ac2212a051bc2b04bdfdfb52f88573588} 
+void AItem\+\_\+\+Experience\+::\+Finish\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+add experience after finish move and destroy item 
+
+Reimplemented from \mbox{\hyperlink{class_a_item___pickup_aba4c8c7633de72e10490b4a48ea4a446}{AItem\+\_\+\+Pickup}}.
+
+\Hypertarget{class_a_item___experience_abed5f077bbb91a0c2d2449d087cfd679}\index{AItem\_Experience@{AItem\_Experience}!GetExperience@{GetExperience}}
+\index{GetExperience@{GetExperience}!AItem\_Experience@{AItem\_Experience}}
+\doxysubsubsection{\texorpdfstring{GetExperience()}{GetExperience()}}
+{\footnotesize\ttfamily \label{class_a_item___experience_abed5f077bbb91a0c2d2449d087cfd679} 
+float AItem\+\_\+\+Experience\+::\+Get\+Experience (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the amount of experience this item can give 
+\end{DoxyReturn}
+\Hypertarget{class_a_item___experience_a4056bc449a9bee32e17264c974efd474}\index{AItem\_Experience@{AItem\_Experience}!OnSphereBeginOverlap@{OnSphereBeginOverlap}}
+\index{OnSphereBeginOverlap@{OnSphereBeginOverlap}!AItem\_Experience@{AItem\_Experience}}
+\doxysubsubsection{\texorpdfstring{OnSphereBeginOverlap()}{OnSphereBeginOverlap()}}
+{\footnotesize\ttfamily \label{class_a_item___experience_a4056bc449a9bee32e17264c974efd474} 
+void AItem\+\_\+\+Experience\+::\+On\+Sphere\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{b\+From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+override func call when Overlap\+Sphere was overlaped set Player\+Char for finish\+Action 
+
+Reimplemented from \mbox{\hyperlink{class_a_item___pickup_a4fb2d70b670cd1aacbacf6fa667336a4}{AItem\+\_\+\+Pickup}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Items/\+Pickup/\+Experience/Item\+\_\+\+Experience.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Items/\+Pickup/\+Experience/Item\+\_\+\+Experience.\+cpp\end{DoxyCompactItemize}

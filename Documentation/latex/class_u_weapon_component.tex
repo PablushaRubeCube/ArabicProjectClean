@@ -1,0 +1,85 @@
+\doxysection{UWeapon\+Component Class Reference}
+\hypertarget{class_u_weapon_component}{}\label{class_u_weapon_component}\index{UWeaponComponent@{UWeaponComponent}}
+Inheritance diagram for UWeapon\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_weapon_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_weapon_component_a4e7957ece8c46c45fdf865f06b6d861b}{Add\+Weapon}} (TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ Weapon\+To\+Spawn)
+\item 
+const TArray$<$ const \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_u_weapon_component_a92cc3701f33c141b2517da06ed51a258}{Get\+Added\+Weapons}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_weapon_component_a8f90a09245b2c034f18c6ada54691241}\label{class_u_weapon_component_a8f90a09245b2c034f18c6ada54691241} 
+virtual void {\bfseries Begin\+Play} () override
+\item 
+\mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_weapon_component_a8ecbd39d8476a2da9cca8783e5e6d713}{Spawn\+Weapon}} (TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ Weapon\+To\+Spawn) const
+\item 
+void \mbox{\hyperlink{class_u_weapon_component_ab9caad58f7dd56d481fa10551123187c}{Attach\+Weapon}} (\mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*}Weapon\+To\+Attach)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_weapon_component_a321acb213f792995bfa2a82917ac1257}\label{class_u_weapon_component_a321acb213f792995bfa2a82917ac1257} 
+TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ {\bfseries Start\+Weapon}
+\item 
+\Hypertarget{class_u_weapon_component_a9b9270e548d67eaf0775516ae2a57817}\label{class_u_weapon_component_a9b9270e548d67eaf0775516ae2a57817} 
+TArray$<$ TObject\+Ptr$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ $>$ {\bfseries Added\+Weapons}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_weapon_component_a4e7957ece8c46c45fdf865f06b6d861b}\index{UWeaponComponent@{UWeaponComponent}!AddWeapon@{AddWeapon}}
+\index{AddWeapon@{AddWeapon}!UWeaponComponent@{UWeaponComponent}}
+\doxysubsubsection{\texorpdfstring{AddWeapon()}{AddWeapon()}}
+{\footnotesize\ttfamily \label{class_u_weapon_component_a4e7957ece8c46c45fdf865f06b6d861b} 
+void UWeapon\+Component\+::\+Add\+Weapon (\begin{DoxyParamCaption}\item[{TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$}]{Weapon\+To\+Spawn}{}\end{DoxyParamCaption})}
+
+adds a weapon to the weapon component 
+\begin{DoxyParams}{Parameters}
+{\em expected} & weapon class type to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_weapon_component_ab9caad58f7dd56d481fa10551123187c}\index{UWeaponComponent@{UWeaponComponent}!AttachWeapon@{AttachWeapon}}
+\index{AttachWeapon@{AttachWeapon}!UWeaponComponent@{UWeaponComponent}}
+\doxysubsubsection{\texorpdfstring{AttachWeapon()}{AttachWeapon()}}
+{\footnotesize\ttfamily \label{class_u_weapon_component_ab9caad58f7dd56d481fa10551123187c} 
+void UWeapon\+Component\+::\+Attach\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*}}]{Weapon\+To\+Attach}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Attach Spawned weapon 
+\begin{DoxyParams}{Parameters}
+{\em Weapon\+To\+Attach} & expected Weapon to Attach \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_weapon_component_a92cc3701f33c141b2517da06ed51a258}\index{UWeaponComponent@{UWeaponComponent}!GetAddedWeapons@{GetAddedWeapons}}
+\index{GetAddedWeapons@{GetAddedWeapons}!UWeaponComponent@{UWeaponComponent}}
+\doxysubsubsection{\texorpdfstring{GetAddedWeapons()}{GetAddedWeapons()}}
+{\footnotesize\ttfamily \label{class_u_weapon_component_a92cc3701f33c141b2517da06ed51a258} 
+const TArray$<$ const \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*} $>$ UWeapon\+Component\+::\+Get\+Added\+Weapons (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a copy of the array of weapons added to weapon component 
+\end{DoxyReturn}
+\Hypertarget{class_u_weapon_component_a8ecbd39d8476a2da9cca8783e5e6d713}\index{UWeaponComponent@{UWeaponComponent}!SpawnWeapon@{SpawnWeapon}}
+\index{SpawnWeapon@{SpawnWeapon}!UWeaponComponent@{UWeaponComponent}}
+\doxysubsubsection{\texorpdfstring{SpawnWeapon()}{SpawnWeapon()}}
+{\footnotesize\ttfamily \label{class_u_weapon_component_a8ecbd39d8476a2da9cca8783e5e6d713} 
+\mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} \texorpdfstring{$\ast$}{*} UWeapon\+Component\+::\+Spawn\+Weapon (\begin{DoxyParamCaption}\item[{TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$}]{Weapon\+To\+Spawn}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Just spawn weapon without attach 
+\begin{DoxyParams}{Parameters}
+{\em Weapon\+To\+Spawn} & expected Weapon to Spawn \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Components/Weapon\+Component.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Components/Weapon\+Component.\+cpp\end{DoxyCompactItemize}

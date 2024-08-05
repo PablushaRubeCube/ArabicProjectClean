@@ -1,0 +1,35 @@
+\doxysection{Item\+\_\+\+Experience.\+h}
+\hypertarget{_item___experience_8h_source}{}\label{_item___experience_8h_source}\index{Source/ChibaChaba/Public/Items/Pickup/Experience/Item\_Experience.h@{Source/ChibaChaba/Public/Items/Pickup/Experience/Item\_Experience.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Items/Pickup/Item\_Pickup.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Item\_Experience.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_player_character}{APlayerCharacter}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_item___experience}{AItem\_Experience}}\ :\ public\ \mbox{\hyperlink{class_a_item___pickup}{AItem\_Pickup}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_a_item___experience}{AItem\_Experience}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ GetExperience()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ Experience;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnSphereBeginOverlap(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ bFromSweep,\ \textcolor{keyword}{const}\ FHitResult\&\ SweepResult)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ FinishAction()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,115 @@
+\doxysection{AChiba\+Chaba\+Game\+Mode\+Base Class Reference}
+\hypertarget{class_a_chiba_chaba_game_mode_base}{}\label{class_a_chiba_chaba_game_mode_base}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+Inheritance diagram for AChiba\+Chaba\+Game\+Mode\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_chiba_chaba_game_mode_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ $>$ \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_a7091e8c52734343e664eb95e001a8aa6}{Get\+Array\+Weapons}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_a49740604a7f14fcc312a93fda495a83c}{Clear\+Pause}} () override
+\item 
+void \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_a8c4bf8e3b43851f5c8a363cc72f3d653}{Game\+Over}} ()
+\item 
+void \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_ac13de97d9ed7f25d96e3cb05989d5efd}{Start\+Game}} ()
+\item 
+void \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_ad9197069d558fb6e55bd78e5bf6b0ecc}{Level\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_a750913afb1df688de538fbd679f2d898}{Open\+Credits}} ()
+\item 
+\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base_ac68cb11de0f3a5fe2053d29f20010cf2}{Get\+Player\+Character}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_aebe7988dc9bc9cddf9e49b0e5d864409}\label{class_a_chiba_chaba_game_mode_base_aebe7988dc9bc9cddf9e49b0e5d864409} 
+FOn\+Change\+Game\+State {\bfseries On\+Change\+Game\+State}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a10938f8cee173164798c5a8013a4d7db}\label{class_a_chiba_chaba_game_mode_base_a10938f8cee173164798c5a8013a4d7db} 
+virtual void {\bfseries Start\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_ac588950c1a45f457201b0578760ad169}\label{class_a_chiba_chaba_game_mode_base_ac588950c1a45f457201b0578760ad169} 
+TObject\+Ptr$<$ UAudio\+Component $>$ {\bfseries Audio\+Component}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a3cf7f3e76c144afa03e685b3be828493}\label{class_a_chiba_chaba_game_mode_base_a3cf7f3e76c144afa03e685b3be828493} 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_spawn_component}{USpawn\+Component}} $>$ {\bfseries Spawn\+Component}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a3792a0d424531a14b6065cf64b9a0c70}\label{class_a_chiba_chaba_game_mode_base_a3792a0d424531a14b6065cf64b9a0c70} 
+TArray$<$ TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ $>$ {\bfseries Weapons\+To\+Spawn}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a123587e3467edf3d63d025310df698b9}\label{class_a_chiba_chaba_game_mode_base_a123587e3467edf3d63d025310df698b9} 
+int32 {\bfseries Num\+Weapon\+Array}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_ab847d0822115cf7b12e11abcb108315e}\label{class_a_chiba_chaba_game_mode_base_ab847d0822115cf7b12e11abcb108315e} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Background\+Music}
+\item 
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a69c62b89ecab0602effd517f89ad0653}\label{class_a_chiba_chaba_game_mode_base_a69c62b89ecab0602effd517f89ad0653} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Game\+Over\+Music}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_chiba_chaba_game_mode_base_a49740604a7f14fcc312a93fda495a83c}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!ClearPause@{ClearPause}}
+\index{ClearPause@{ClearPause}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{ClearPause()}{ClearPause()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_a49740604a7f14fcc312a93fda495a83c} 
+bool AChiba\+Chaba\+Game\+Mode\+Base\+::\+Clear\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+change state to claerpause \Hypertarget{class_a_chiba_chaba_game_mode_base_a8c4bf8e3b43851f5c8a363cc72f3d653}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_a8c4bf8e3b43851f5c8a363cc72f3d653} 
+void AChiba\+Chaba\+Game\+Mode\+Base\+::\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+change state to Game\+Over \Hypertarget{class_a_chiba_chaba_game_mode_base_a7091e8c52734343e664eb95e001a8aa6}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!GetArrayWeapons@{GetArrayWeapons}}
+\index{GetArrayWeapons@{GetArrayWeapons}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{GetArrayWeapons()}{GetArrayWeapons()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_a7091e8c52734343e664eb95e001a8aa6} 
+TArray$<$ TSubclass\+Of$<$ \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}} $>$ $>$ AChiba\+Chaba\+Game\+Mode\+Base\+::\+Get\+Array\+Weapons (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+random array weapon type from Weapons\+To\+Spawn 
+\end{DoxyReturn}
+\Hypertarget{class_a_chiba_chaba_game_mode_base_ac68cb11de0f3a5fe2053d29f20010cf2}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!GetPlayerCharacter@{GetPlayerCharacter}}
+\index{GetPlayerCharacter@{GetPlayerCharacter}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{GetPlayerCharacter()}{GetPlayerCharacter()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_ac68cb11de0f3a5fe2053d29f20010cf2} 
+\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*} AChiba\+Chaba\+Game\+Mode\+Base\+::\+Get\+Player\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+ref to player character from level 
+\end{DoxyReturn}
+\Hypertarget{class_a_chiba_chaba_game_mode_base_ad9197069d558fb6e55bd78e5bf6b0ecc}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!LevelUp@{LevelUp}}
+\index{LevelUp@{LevelUp}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{LevelUp()}{LevelUp()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_ad9197069d558fb6e55bd78e5bf6b0ecc} 
+void AChiba\+Chaba\+Game\+Mode\+Base\+::\+Level\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+change state to Level\+Up \Hypertarget{class_a_chiba_chaba_game_mode_base_a750913afb1df688de538fbd679f2d898}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!OpenCredits@{OpenCredits}}
+\index{OpenCredits@{OpenCredits}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{OpenCredits()}{OpenCredits()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_a750913afb1df688de538fbd679f2d898} 
+void AChiba\+Chaba\+Game\+Mode\+Base\+::\+Open\+Credits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+change state to Level\+Up \Hypertarget{class_a_chiba_chaba_game_mode_base_ac13de97d9ed7f25d96e3cb05989d5efd}\index{AChibaChabaGameModeBase@{AChibaChabaGameModeBase}!StartGame@{StartGame}}
+\index{StartGame@{StartGame}!AChibaChabaGameModeBase@{AChibaChabaGameModeBase}}
+\doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
+{\footnotesize\ttfamily \label{class_a_chiba_chaba_game_mode_base_ac13de97d9ed7f25d96e3cb05989d5efd} 
+void AChiba\+Chaba\+Game\+Mode\+Base\+::\+Start\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+change state to Start\+Game 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/Chiba\+Chaba\+Game\+Mode\+Base.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/Chiba\+Chaba\+Game\+Mode\+Base.\+cpp\end{DoxyCompactItemize}

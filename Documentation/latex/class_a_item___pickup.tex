@@ -1,0 +1,86 @@
+\doxysection{AItem\+\_\+\+Pickup Class Reference}
+\hypertarget{class_a_item___pickup}{}\label{class_a_item___pickup}\index{AItem\_Pickup@{AItem\_Pickup}}
+Inheritance diagram for AItem\+\_\+\+Pickup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_a_item___pickup}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_item___pickup_a50c434eea1684cdd7df1943ce497b5b0}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_item___pickup_a4fb2d70b670cd1aacbacf6fa667336a4}{On\+Sphere\+Begin\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+virtual void \mbox{\hyperlink{class_a_item___pickup_aba4c8c7633de72e10490b4a48ea4a446}{Finish\+Action}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_item___pickup_a8ee9e13e68e11fbbda701b16f01540fb}\label{class_a_item___pickup_a8ee9e13e68e11fbbda701b16f01540fb} 
+FTimer\+Handle {\bfseries Timer\+Handle}
+\item 
+\Hypertarget{class_a_item___pickup_abf887a290fac6b6c9837cab1395593c7}\label{class_a_item___pickup_abf887a290fac6b6c9837cab1395593c7} 
+float {\bfseries Timer\+Rate}
+\item 
+\Hypertarget{class_a_item___pickup_ac3ed5a8c841574d7cb865805008b1114}\label{class_a_item___pickup_ac3ed5a8c841574d7cb865805008b1114} 
+TObject\+Ptr$<$ UCurve\+Float $>$ {\bfseries Move\+Item\+Curve}
+\item 
+\Hypertarget{class_a_item___pickup_a4a39d6669082251c40de0b9922b2ed4a}\label{class_a_item___pickup_a4a39d6669082251c40de0b9922b2ed4a} 
+float {\bfseries Total\+Time\+Move}
+\item 
+\Hypertarget{class_a_item___pickup_ab5d26e982721ac173d2022ce9de86a94}\label{class_a_item___pickup_ab5d26e982721ac173d2022ce9de86a94} 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} $>$ {\bfseries Player\+Char}
+\item 
+\Hypertarget{class_a_item___pickup_ab93c7de914429d94533f97fb86d087f7}\label{class_a_item___pickup_ab93c7de914429d94533f97fb86d087f7} 
+TObject\+Ptr$<$ USphere\+Component $>$ {\bfseries Overlap\+Sphere}
+\item 
+\Hypertarget{class_a_item___pickup_a2a34c621eb34b2d576f49e05bc919d25}\label{class_a_item___pickup_a2a34c621eb34b2d576f49e05bc919d25} 
+TObject\+Ptr$<$ UNiagara\+Component $>$ {\bfseries Niagara\+Pickup}
+\item 
+\Hypertarget{class_a_item___pickup_a7cadfaf76bc4ae4ba40953517c3bfde5}\label{class_a_item___pickup_a7cadfaf76bc4ae4ba40953517c3bfde5} 
+TObject\+Ptr$<$ UNiagara\+System $>$ {\bfseries Overlap\+Particle}
+\item 
+\Hypertarget{class_a_item___pickup_aabccee415069f953728c8dfdb90b27bf}\label{class_a_item___pickup_aabccee415069f953728c8dfdb90b27bf} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Pickup\+Sound}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_item___pickup_a50c434eea1684cdd7df1943ce497b5b0}\index{AItem\_Pickup@{AItem\_Pickup}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AItem\_Pickup@{AItem\_Pickup}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_item___pickup_a50c434eea1684cdd7df1943ce497b5b0} 
+void AItem\+\_\+\+Pickup\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_item}{AItem}}.
+
+\Hypertarget{class_a_item___pickup_aba4c8c7633de72e10490b4a48ea4a446}\index{AItem\_Pickup@{AItem\_Pickup}!FinishAction@{FinishAction}}
+\index{FinishAction@{FinishAction}!AItem\_Pickup@{AItem\_Pickup}}
+\doxysubsubsection{\texorpdfstring{FinishAction()}{FinishAction()}}
+{\footnotesize\ttfamily \label{class_a_item___pickup_aba4c8c7633de72e10490b4a48ea4a446} 
+void AItem\+\_\+\+Pickup\+::\+Finish\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+virtual func finish item pickup action 
+
+Reimplemented in \mbox{\hyperlink{class_a_item___experience_ac2212a051bc2b04bdfdfb52f88573588}{AItem\+\_\+\+Experience}}.
+
+\Hypertarget{class_a_item___pickup_a4fb2d70b670cd1aacbacf6fa667336a4}\index{AItem\_Pickup@{AItem\_Pickup}!OnSphereBeginOverlap@{OnSphereBeginOverlap}}
+\index{OnSphereBeginOverlap@{OnSphereBeginOverlap}!AItem\_Pickup@{AItem\_Pickup}}
+\doxysubsubsection{\texorpdfstring{OnSphereBeginOverlap()}{OnSphereBeginOverlap()}}
+{\footnotesize\ttfamily \label{class_a_item___pickup_a4fb2d70b670cd1aacbacf6fa667336a4} 
+void AItem\+\_\+\+Pickup\+::\+On\+Sphere\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{b\+From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+virtual func call when Overlap\+Sphere was overlaped start pickup action 
+
+Reimplemented in \mbox{\hyperlink{class_a_item___experience_a4056bc449a9bee32e17264c974efd474}{AItem\+\_\+\+Experience}}, and \mbox{\hyperlink{class_a_item___heal_ae76d16e9052673e94c1576c76c9e8bbc}{AItem\+\_\+\+Heal}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Items/\+Pickup/Item\+\_\+\+Pickup.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Items/\+Pickup/Item\+\_\+\+Pickup.\+cpp\end{DoxyCompactItemize}

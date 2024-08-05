@@ -1,0 +1,71 @@
+\doxysection{Base\+Character.\+h}
+\hypertarget{_base_character_8h_source}{}\label{_base_character_8h_source}\index{Source/ChibaChaba/Public/Characters/BaseCharacter.h@{Source/ChibaChaba/Public/Characters/BaseCharacter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Character.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}BaseCharacter.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_health_component}{UHealthComponent}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_weapon_component}{UWeaponComponent}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ UCLASS()}
+\DoxyCodeLine{00013\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_base_character}{ABaseCharacter}}\ :\ public\ ACharacter}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_a_base_character}{ABaseCharacter}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ UFUNCTION(BlueprintPure)}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ UAnimMontage*\ GetMontageAttack()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Death();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Heath"{}})}
+\DoxyCodeLine{00033\ \ \ \ \ TObjectPtr<UHealthComponent>\ HealthComponent;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00036\ \ \ \ \ TObjectPtr<UWeaponComponent>\ WeaponComponent;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Material"{}})}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ MaterialChangeRate;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Material"{}})}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ TotalTimeMaterialChange;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Health"{}})}
+\DoxyCodeLine{00045\ \ \ \ \ TArray<TObjectPtr<UAnimMontage>>\ MontagesDeath;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00048\ \ \ \ \ TObjectPtr<UAnimMontage>\ MontageAttack;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ game\ starts\ or\ when\ spawned}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ FTimerHandle\ MaterialTimer;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00057\ \ \ \ \ TArray<TObjectPtr<UMaterialInstanceDynamic>>\ DymMaterials;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ MaterialChangeStartTime;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ StartDie;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ CreateDymMaterialArray();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDymMaterialParam();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ CreateDymMaterial();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ ChangeDymMaterialApperance();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ DissolveChar();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ PlayDeathAnimation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \};}
+
+\end{DoxyCode}

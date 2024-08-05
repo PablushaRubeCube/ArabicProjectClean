@@ -1,0 +1,60 @@
+\doxysection{Chi\+Cha\+Core\+Types.\+h}
+\hypertarget{_chi_cha_core_types_8h_source}{}\label{_chi_cha_core_types_8h_source}\index{Source/ChibaChaba/Public/ChiChaCoreTypes.h@{Source/ChibaChaba/Public/ChiChaCoreTypes.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ChiChaCoreTypes.generated.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ UENUM(BlueprintType)}
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum\ class}\ EGameStates\ :\ uint8}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ EGS\_WaitToStart,}
+\DoxyCodeLine{00009\ \ \ \ \ EGS\_InProgress,}
+\DoxyCodeLine{00010\ \ \ \ \ EGS\_GameOver,}
+\DoxyCodeLine{00011\ \ \ \ \ EGS\_LevelUp,}
+\DoxyCodeLine{00012\ \ \ \ \ EGS\_PauseMenu,}
+\DoxyCodeLine{00013\ \ \ \ \ EGS\_Credits,}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ EGS\_MAX}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }UTexture2D;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00021\ struct\ \mbox{\hyperlink{struct_f_weapons_type}{FWeaponsType}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00026\ \ \ \ \ TObjectPtr<UTexture2D>\ WeaponIcone\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00027\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00028\ \ \ \ \ FText\ NameWeapon;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ FText\ LevelWeapon;}}
+\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00032\ \ \ \ \ FText\ Overview;}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00036\ struct\ \mbox{\hyperlink{struct_f_weapon_characteristics}{FWeaponCharacteristics}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ Damage\ =\ 0.f;}
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ Radius\ =\ 0.f;}
+\DoxyCodeLine{00044\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ Speed\ =\ 0.f;}
+\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ Size\ =\ 0.f;}
+\DoxyCodeLine{00048\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00049\ \ \ \ \ int32\ Quantity\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ ReloadRate\ =\ 0.f;}
+\DoxyCodeLine{00052\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ Weapon)}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ LifeTime\ =\ 0.f;}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

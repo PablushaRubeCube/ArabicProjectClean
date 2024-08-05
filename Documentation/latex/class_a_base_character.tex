@@ -1,0 +1,70 @@
+\doxysection{ABase\+Character Class Reference}
+\hypertarget{class_a_base_character}{}\label{class_a_base_character}\index{ABaseCharacter@{ABaseCharacter}}
+Inheritance diagram for ABase\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_a_base_character}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const UAnim\+Montage \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_base_character_afd71d366d9d67c346ba0c4c8935e2c4f}{Get\+Montage\+Attack}} () const
+\item 
+virtual void \mbox{\hyperlink{class_a_base_character_ac310d9cd8d6dd5603a7282e2d9fb385e}{Death}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_base_character_a2d83630c5ef87b8b4956456c422292af}\label{class_a_base_character_a2d83630c5ef87b8b4956456c422292af} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_base_character_a9c0735706d2a77cad0791ff8ce3e7f94}\label{class_a_base_character_a9c0735706d2a77cad0791ff8ce3e7f94} 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_health_component}{UHealth\+Component}} $>$ {\bfseries Health\+Component}
+\item 
+\Hypertarget{class_a_base_character_aa3ed25a79c0876a4ba68c46902bd7358}\label{class_a_base_character_aa3ed25a79c0876a4ba68c46902bd7358} 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_weapon_component}{UWeapon\+Component}} $>$ {\bfseries Weapon\+Component}
+\item 
+\Hypertarget{class_a_base_character_afff5eb965c54720ac8c1def2b8eded69}\label{class_a_base_character_afff5eb965c54720ac8c1def2b8eded69} 
+float {\bfseries Material\+Change\+Rate}
+\item 
+\Hypertarget{class_a_base_character_ab8fdf3692bd891a467bf4977344b1551}\label{class_a_base_character_ab8fdf3692bd891a467bf4977344b1551} 
+float {\bfseries Total\+Time\+Material\+Change}
+\item 
+\Hypertarget{class_a_base_character_ac8471cebebc0c5dc32d36951ee6f26bb}\label{class_a_base_character_ac8471cebebc0c5dc32d36951ee6f26bb} 
+TArray$<$ TObject\+Ptr$<$ UAnim\+Montage $>$ $>$ {\bfseries Montages\+Death}
+\item 
+\Hypertarget{class_a_base_character_a769190cd262aef71aa066b2fd39e2f77}\label{class_a_base_character_a769190cd262aef71aa066b2fd39e2f77} 
+TObject\+Ptr$<$ UAnim\+Montage $>$ {\bfseries Montage\+Attack}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_base_character_ac310d9cd8d6dd5603a7282e2d9fb385e}\index{ABaseCharacter@{ABaseCharacter}!Death@{Death}}
+\index{Death@{Death}!ABaseCharacter@{ABaseCharacter}}
+\doxysubsubsection{\texorpdfstring{Death()}{Death()}}
+{\footnotesize\ttfamily \label{class_a_base_character_ac310d9cd8d6dd5603a7282e2d9fb385e} 
+void ABase\+Character\+::\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Ñauses the character to die 
+
+Reimplemented in \mbox{\hyperlink{class_a_enemy_character_a7ab310dd965cdc118474be134b61dc60}{AEnemy\+Character}}, and \mbox{\hyperlink{class_a_player_character_acb0975f88ccf4fddac60659b04087e9d}{APlayer\+Character}}.
+
+\Hypertarget{class_a_base_character_afd71d366d9d67c346ba0c4c8935e2c4f}\index{ABaseCharacter@{ABaseCharacter}!GetMontageAttack@{GetMontageAttack}}
+\index{GetMontageAttack@{GetMontageAttack}!ABaseCharacter@{ABaseCharacter}}
+\doxysubsubsection{\texorpdfstring{GetMontageAttack()}{GetMontageAttack()}}
+{\footnotesize\ttfamily \label{class_a_base_character_afd71d366d9d67c346ba0c4c8935e2c4f} 
+const UAnim\+Montage \texorpdfstring{$\ast$}{*} ABase\+Character\+::\+Get\+Montage\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the character\textquotesingle{}s attack montage 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Characters/Base\+Character.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Characters/Base\+Character.\+cpp\end{DoxyCompactItemize}

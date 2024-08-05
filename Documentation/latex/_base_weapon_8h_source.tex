@@ -1,0 +1,71 @@
+\doxysection{Base\+Weapon.\+h}
+\hypertarget{_base_weapon_8h_source}{}\label{_base_weapon_8h_source}\index{Source/ChibaChaba/Public/Weapons/BaseWeapon.h@{Source/ChibaChaba/Public/Weapons/BaseWeapon.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ChiChaCoreTypes.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}BaseWeapon.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_base_character}{ABaseCharacter}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }USoundBase;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }UImage;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ UCLASS()}
+\DoxyCodeLine{00015\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}}\ :\ public\ AActor}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ GetDamage()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ FName\&\ GetSocketName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_f_weapons_type}{FWeaponsType}}\&\ GetWeaponType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ LevelUpWeapon();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ UFUNCTION(BlueprintPure)}
+\DoxyCodeLine{00046\ \ \ \ \ int32\ GetCurrentLevel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ UFUNCTION(BlueprintCallable)}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnActorWeaponOverlap(AActor*\ OverlappedActor,\ AActor*\ OtherActor);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00055\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00056\ \ \ \ \ FName\ SocketName;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00059\ \ \ \ \ TSubclassOf<AActor>\ IgnoreClass;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00062\ \ \ \ \ TSubclassOf<AActor>\ FindToDamageClass;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00065\ \ \ \ \ TObjectPtr<USoundBase>\ InitSound;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}})}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{struct_f_weapons_type}{FWeaponsType}}\ WeaponType;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{struct_f_weapon_characteristics}{FWeaponCharacteristics}}\ WeaponCurrentCharacteristics;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00074\ \ \ \ \ TArray<FWeaponCharacteristics>\ WeaponLevelUpgrades;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent)}
+\DoxyCodeLine{00080\ \ \ \ \ void\ SetupEffects();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ BeginPlay()\ override;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ private:}
+\DoxyCodeLine{00085\ \ \ \ \ int32\ CurrentLevel;}
+\DoxyCodeLine{00086\ \};}
+
+\end{DoxyCode}

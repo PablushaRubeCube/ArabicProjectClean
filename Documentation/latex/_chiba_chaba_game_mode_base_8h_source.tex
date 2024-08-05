@@ -1,0 +1,84 @@
+\doxysection{Chiba\+Chaba\+Game\+Mode\+Base.\+h}
+\hypertarget{_chiba_chaba_game_mode_base_8h_source}{}\label{_chiba_chaba_game_mode_base_8h_source}\index{Source/ChibaChaba/Public/ChibaChabaGameModeBase.h@{Source/ChibaChaba/Public/ChibaChabaGameModeBase.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ Epic\ Games,\ Inc.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/GameModeBase.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ChiChaCoreTypes.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ChibaChabaGameModeBase.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ DECLARE\_DYNAMIC\_MULTICAST\_DELEGATE\_OneParam(FOnChangeGameState,\ EGameStates,\ State);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }UAudioComponent;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_spawn_component}{USpawnComponent}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_player_character}{APlayerCharacter}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }USoundBase;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ UCLASS()}
+\DoxyCodeLine{00019\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base}{AChibaChabaGameModeBase}}\ :\ public\ AGameModeBase}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_a_chiba_chaba_game_mode_base}{AChibaChabaGameModeBase}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ UPROPERTY(BlueprintAssignable)}
+\DoxyCodeLine{00027\ \ \ \ \ FOnChangeGameState\ OnChangeGameState;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ TArray<TSubclassOf<ABaseWeapon>>\ GetArrayWeapons()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ ClearPause()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ UFUNCTION(BlueprintCallable)}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ GameOver();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ UFUNCTION(BlueprintCallable)}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ StartGame();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ LevelUp();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ UFUNCTION(BlueprintCallable)}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ OpenCredits();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_a_player_character}{APlayerCharacter}}*\ GetPlayerCharacter()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Music"{}})}
+\DoxyCodeLine{00069\ \ \ \ \ TObjectPtr<UAudioComponent>\ AudioComponent;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Spawn"{}})}
+\DoxyCodeLine{00072\ \ \ \ \ TObjectPtr<USpawnComponent>\ SpawnComponent;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapons"{}})}
+\DoxyCodeLine{00075\ \ \ \ \ TArray<TSubclassOf<ABaseWeapon>>\ WeaponsToSpawn;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapons"{}})}
+\DoxyCodeLine{00078\ \ \ \ \ int32\ NumWeaponArray;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Music"{}})}
+\DoxyCodeLine{00081\ \ \ \ \ TObjectPtr<USoundBase>\ BackgroundMusic;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Music"{}})}
+\DoxyCodeLine{00084\ \ \ \ \ TObjectPtr<USoundBase>\ GameOverMusic;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ StartPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00089\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00090\ \ \ \ \ TObjectPtr<APlayerCharacter>\ PlayerChar;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ EGameStates\ GameState;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ SetGameState(EGameStates\ State);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ FirstLaunchGame();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ PlayBackgroundMusic();}
+\DoxyCodeLine{00108\ \};}
+
+\end{DoxyCode}

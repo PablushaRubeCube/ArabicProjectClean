@@ -1,0 +1,65 @@
+\doxysection{Player\+Character.\+h}
+\hypertarget{_player_character_8h_source}{}\label{_player_character_8h_source}\index{Source/ChibaChaba/Public/Characters/PlayerCharacter.h@{Source/ChibaChaba/Public/Characters/PlayerCharacter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Characters/BaseCharacter.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}InputActionValue.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ChiChaCoreTypes.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}PlayerCharacter.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }USphereComponent;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }USpringArmComponent;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }UCameraComponent;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }UWidgetComponent;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_experience_component}{UExperienceComponent}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }UInputMappingContext;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }UInputAction;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ UCLASS()}
+\DoxyCodeLine{00020\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_player_character}{APlayerCharacter}}\ :\ public\ \mbox{\hyperlink{class_a_base_character}{ABaseCharacter}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_a_player_character}{APlayerCharacter}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Death()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Collision"{}})}
+\DoxyCodeLine{00034\ \ \ \ \ TObjectPtr<USphereComponent>\ AttackSphere;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Camera"{}})}
+\DoxyCodeLine{00037\ \ \ \ \ TObjectPtr<USpringArmComponent>\ SpringArmComponent;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Camera"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ TObjectPtr<UCameraComponent>\ ToggleCamera;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Camera"{}})}
+\DoxyCodeLine{00043\ \ \ \ \ TObjectPtr<UCameraComponent>\ GameCamera;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite,\ Category\ =\ \textcolor{stringliteral}{"{}Widgets\ |\ Health"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00046\ \ \ \ \ TObjectPtr<UWidgetComponent>\ HealthWidgetComponent;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}ExperienceComponent"{}})}
+\DoxyCodeLine{00049\ \ \ \ \ TObjectPtr<UExperienceComponent>\ ExperienceComponent;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Input"{}})}
+\DoxyCodeLine{00052\ \ \ \ \ TObjectPtr<UInputMappingContext>\ MappingContext;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Input"{}})}
+\DoxyCodeLine{00055\ \ \ \ \ TObjectPtr<UInputAction>\ MoveAction;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ SetupPlayerInputComponent(\textcolor{keyword}{class}\ UInputComponent*\ PlayerInputComponent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ Move(\textcolor{keyword}{const}\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00070\ \};}
+
+\end{DoxyCode}

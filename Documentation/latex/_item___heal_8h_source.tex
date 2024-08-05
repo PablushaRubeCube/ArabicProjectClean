@@ -1,0 +1,31 @@
+\doxysection{Item\+\_\+\+Heal.\+h}
+\hypertarget{_item___heal_8h_source}{}\label{_item___heal_8h_source}\index{Source/ChibaChaba/Public/Items/Pickup/Heal/Item\_Heal.h@{Source/ChibaChaba/Public/Items/Pickup/Heal/Item\_Heal.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Items/Pickup/Item\_Pickup.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Item\_Heal.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ UCLASS()}
+\DoxyCodeLine{00010\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_item___heal}{AItem\_Heal}}\ :\ public\ \mbox{\hyperlink{class_a_item___pickup}{AItem\_Pickup}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_a_item___heal}{AItem\_Heal}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Health"{}})}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ HealValue;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnSphereBeginOverlap(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ bFromSweep,\ \textcolor{keyword}{const}\ FHitResult\&\ SweepResult)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

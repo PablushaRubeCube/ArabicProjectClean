@@ -1,0 +1,79 @@
+\doxysection{UExperience\+Component Class Reference}
+\hypertarget{class_u_experience_component}{}\label{class_u_experience_component}\index{UExperienceComponent@{UExperienceComponent}}
+Inheritance diagram for UExperience\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_experience_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_experience_component_addc22176ba3a4210b4dfa74409dff2d4}{Add\+Experience}} (float Exp)
+\item 
+float \mbox{\hyperlink{class_u_experience_component_a08ae7ade17957f26b2d2e21e24f2b99f}{Get\+Experience}} () const
+\item 
+float \mbox{\hyperlink{class_u_experience_component_a51752b22c7bfd97793f936089104b58e}{Get\+Experience\+Percent}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_experience_component_a1b961600bf62a1dd76108fc950f916da}\label{class_u_experience_component_a1b961600bf62a1dd76108fc950f916da} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_experience_component_aa0225eecc8d4933ab096be9ba0aac8c8}\label{class_u_experience_component_aa0225eecc8d4933ab096be9ba0aac8c8} 
+float {\bfseries Experience}
+\item 
+\Hypertarget{class_u_experience_component_a016e9f39109756b863c841c56b978ede}\label{class_u_experience_component_a016e9f39109756b863c841c56b978ede} 
+int32 {\bfseries Current\+Level}
+\item 
+\Hypertarget{class_u_experience_component_aa7277eeea6c835bad92ca4decde5d8e1}\label{class_u_experience_component_aa7277eeea6c835bad92ca4decde5d8e1} 
+float {\bfseries Start\+Experience\+To\+Level\+Up}
+\item 
+\Hypertarget{class_u_experience_component_a5ab41611b683e82560b137d665855130}\label{class_u_experience_component_a5ab41611b683e82560b137d665855130} 
+float {\bfseries Level\+Gain\+Rate}
+\item 
+\Hypertarget{class_u_experience_component_a02312cdc591ef940cdb75d3eecb5a776}\label{class_u_experience_component_a02312cdc591ef940cdb75d3eecb5a776} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Level\+Up\+Sound}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_experience_component_addc22176ba3a4210b4dfa74409dff2d4}\index{UExperienceComponent@{UExperienceComponent}!AddExperience@{AddExperience}}
+\index{AddExperience@{AddExperience}!UExperienceComponent@{UExperienceComponent}}
+\doxysubsubsection{\texorpdfstring{AddExperience()}{AddExperience()}}
+{\footnotesize\ttfamily \label{class_u_experience_component_addc22176ba3a4210b4dfa74409dff2d4} 
+void UExperience\+Component\+::\+Add\+Experience (\begin{DoxyParamCaption}\item[{float}]{Exp}{}\end{DoxyParamCaption})}
+
+adds the desired amount of experience to the character 
+\begin{DoxyParams}{Parameters}
+{\em expected} & amount of experience you can\textquotesingle{}t add a negative value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_experience_component_a08ae7ade17957f26b2d2e21e24f2b99f}\index{UExperienceComponent@{UExperienceComponent}!GetExperience@{GetExperience}}
+\index{GetExperience@{GetExperience}!UExperienceComponent@{UExperienceComponent}}
+\doxysubsubsection{\texorpdfstring{GetExperience()}{GetExperience()}}
+{\footnotesize\ttfamily \label{class_u_experience_component_a08ae7ade17957f26b2d2e21e24f2b99f} 
+float UExperience\+Component\+::\+Get\+Experience (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the character\textquotesingle{}s current experience 
+\end{DoxyReturn}
+\Hypertarget{class_u_experience_component_a51752b22c7bfd97793f936089104b58e}\index{UExperienceComponent@{UExperienceComponent}!GetExperiencePercent@{GetExperiencePercent}}
+\index{GetExperiencePercent@{GetExperiencePercent}!UExperienceComponent@{UExperienceComponent}}
+\doxysubsubsection{\texorpdfstring{GetExperiencePercent()}{GetExperiencePercent()}}
+{\footnotesize\ttfamily \label{class_u_experience_component_a51752b22c7bfd97793f936089104b58e} 
+float UExperience\+Component\+::\+Get\+Experience\+Percent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+experience as a percentage to the next level 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Components/Experience\+Component.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Components/Experience\+Component.\+cpp\end{DoxyCompactItemize}

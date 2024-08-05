@@ -1,0 +1,76 @@
+\doxysection{AItem\+\_\+\+Heal Class Reference}
+\hypertarget{class_a_item___heal}{}\label{class_a_item___heal}\index{AItem\_Heal@{AItem\_Heal}}
+Inheritance diagram for AItem\+\_\+\+Heal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_a_item___heal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_item___heal_a56c371c964c6639221a8410a9415c4f6}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_item___heal_ae76d16e9052673e94c1576c76c9e8bbc}{On\+Sphere\+Begin\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_item___pickup_aba4c8c7633de72e10490b4a48ea4a446}{Finish\+Action}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_item___heal_aa45b1cadd09c1057504205fcde73fd03}\label{class_a_item___heal_aa45b1cadd09c1057504205fcde73fd03} 
+float {\bfseries Heal\+Value}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}}}
+\begin{DoxyCompactItemize}
+\item 
+FTimer\+Handle {\bfseries Timer\+Handle}
+\item 
+float {\bfseries Timer\+Rate}
+\item 
+TObject\+Ptr$<$ UCurve\+Float $>$ {\bfseries Move\+Item\+Curve}
+\item 
+float {\bfseries Total\+Time\+Move}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} $>$ {\bfseries Player\+Char}
+\item 
+TObject\+Ptr$<$ USphere\+Component $>$ {\bfseries Overlap\+Sphere}
+\item 
+TObject\+Ptr$<$ UNiagara\+Component $>$ {\bfseries Niagara\+Pickup}
+\item 
+TObject\+Ptr$<$ UNiagara\+System $>$ {\bfseries Overlap\+Particle}
+\item 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Pickup\+Sound}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_item___heal_a56c371c964c6639221a8410a9415c4f6}\index{AItem\_Heal@{AItem\_Heal}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AItem\_Heal@{AItem\_Heal}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_item___heal_a56c371c964c6639221a8410a9415c4f6} 
+void AItem\+\_\+\+Heal\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_item___pickup}{AItem\+\_\+\+Pickup}}.
+
+\Hypertarget{class_a_item___heal_ae76d16e9052673e94c1576c76c9e8bbc}\index{AItem\_Heal@{AItem\_Heal}!OnSphereBeginOverlap@{OnSphereBeginOverlap}}
+\index{OnSphereBeginOverlap@{OnSphereBeginOverlap}!AItem\_Heal@{AItem\_Heal}}
+\doxysubsubsection{\texorpdfstring{OnSphereBeginOverlap()}{OnSphereBeginOverlap()}}
+{\footnotesize\ttfamily \label{class_a_item___heal_ae76d16e9052673e94c1576c76c9e8bbc} 
+void AItem\+\_\+\+Heal\+::\+On\+Sphere\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{b\+From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+override func call when Overlap\+Sphere was overlaped call fx and heal logic 
+
+Reimplemented from \mbox{\hyperlink{class_a_item___pickup_a4fb2d70b670cd1aacbacf6fa667336a4}{AItem\+\_\+\+Pickup}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Items/\+Pickup/\+Heal/Item\+\_\+\+Heal.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Items/\+Pickup/\+Heal/Item\+\_\+\+Heal.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\doxysection{UHealth\+Component Class Reference}
+\hypertarget{class_u_health_component}{}\label{class_u_health_component}\index{UHealthComponent@{UHealthComponent}}
+Inheritance diagram for UHealth\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_health_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_u_health_component_a8c5ac5399191f849b9f76214e3ac4d99}{Get\+Health\+Percent}} () const
+\item 
+float \mbox{\hyperlink{class_u_health_component_af402129bd3ad820f74edf16896833fd9}{Get\+Max\+Health}} () const
+\item 
+void \mbox{\hyperlink{class_u_health_component_aba3d19a6d8c79106ae7902a9f6bcc13f}{Heal}} (float Health\+Point)
+\item 
+float \mbox{\hyperlink{class_u_health_component_a1fa5d10ada279238987b12f490d39959}{Get\+Countdown\+Damage\+Percent\+Time}} () const
+\item 
+bool \mbox{\hyperlink{class_u_health_component_a43ff346ade8f089069f7cffd2b697e20}{Was\+Damage\+Recently}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_health_component_a40c0c3f85f39c469f035e3bb0c0ef26b}\label{class_u_health_component_a40c0c3f85f39c469f035e3bb0c0ef26b} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_health_component_aad631519d5abd1bb664a0ecd98d9fe4d}\label{class_u_health_component_aad631519d5abd1bb664a0ecd98d9fe4d} 
+float {\bfseries Max\+Health}
+\item 
+\Hypertarget{class_u_health_component_ab3c9434f7800efc0457c86d1afdd5c5c}\label{class_u_health_component_ab3c9434f7800efc0457c86d1afdd5c5c} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Damage\+Sound}
+\item 
+\Hypertarget{class_u_health_component_ad7aac5bf2cb125e1b9faa2814ab6432a}\label{class_u_health_component_ad7aac5bf2cb125e1b9faa2814ab6432a} 
+TObject\+Ptr$<$ UNiagara\+System $>$ {\bfseries Damaga\+Particle}
+\item 
+\Hypertarget{class_u_health_component_a66238f382784f9daa51fa36997a4c310}\label{class_u_health_component_a66238f382784f9daa51fa36997a4c310} 
+float {\bfseries Damage\+Rate}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_health_component_a1fa5d10ada279238987b12f490d39959}\index{UHealthComponent@{UHealthComponent}!GetCountdownDamagePercentTime@{GetCountdownDamagePercentTime}}
+\index{GetCountdownDamagePercentTime@{GetCountdownDamagePercentTime}!UHealthComponent@{UHealthComponent}}
+\doxysubsubsection{\texorpdfstring{GetCountdownDamagePercentTime()}{GetCountdownDamagePercentTime()}}
+{\footnotesize\ttfamily \label{class_u_health_component_a1fa5d10ada279238987b12f490d39959} 
+float UHealth\+Component\+::\+Get\+Countdown\+Damage\+Percent\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+used as alpha for lerp to change health bar \begin{DoxyReturn}{Returns}
+the time elapsed since any damage was received, in the range from 0 to 1. 
+\end{DoxyReturn}
+\Hypertarget{class_u_health_component_a8c5ac5399191f849b9f76214e3ac4d99}\index{UHealthComponent@{UHealthComponent}!GetHealthPercent@{GetHealthPercent}}
+\index{GetHealthPercent@{GetHealthPercent}!UHealthComponent@{UHealthComponent}}
+\doxysubsubsection{\texorpdfstring{GetHealthPercent()}{GetHealthPercent()}}
+{\footnotesize\ttfamily \label{class_u_health_component_a8c5ac5399191f849b9f76214e3ac4d99} 
+float UHealth\+Component\+::\+Get\+Health\+Percent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+health as a percentage 
+\end{DoxyReturn}
+\Hypertarget{class_u_health_component_af402129bd3ad820f74edf16896833fd9}\index{UHealthComponent@{UHealthComponent}!GetMaxHealth@{GetMaxHealth}}
+\index{GetMaxHealth@{GetMaxHealth}!UHealthComponent@{UHealthComponent}}
+\doxysubsubsection{\texorpdfstring{GetMaxHealth()}{GetMaxHealth()}}
+{\footnotesize\ttfamily \label{class_u_health_component_af402129bd3ad820f74edf16896833fd9} 
+float UHealth\+Component\+::\+Get\+Max\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+max health 
+\end{DoxyReturn}
+\Hypertarget{class_u_health_component_aba3d19a6d8c79106ae7902a9f6bcc13f}\index{UHealthComponent@{UHealthComponent}!Heal@{Heal}}
+\index{Heal@{Heal}!UHealthComponent@{UHealthComponent}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily \label{class_u_health_component_aba3d19a6d8c79106ae7902a9f6bcc13f} 
+void UHealth\+Component\+::\+Heal (\begin{DoxyParamCaption}\item[{float}]{Health\+Point}{}\end{DoxyParamCaption})}
+
+adds the desired amount of health to the character 
+\begin{DoxyParams}{Parameters}
+{\em expected} & amount of Health\+Point you can\textquotesingle{}t add a negative value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_health_component_a43ff346ade8f089069f7cffd2b697e20}\index{UHealthComponent@{UHealthComponent}!WasDamageRecently@{WasDamageRecently}}
+\index{WasDamageRecently@{WasDamageRecently}!UHealthComponent@{UHealthComponent}}
+\doxysubsubsection{\texorpdfstring{WasDamageRecently()}{WasDamageRecently()}}
+{\footnotesize\ttfamily \label{class_u_health_component_a43ff346ade8f089069f7cffd2b697e20} 
+bool UHealth\+Component\+::\+Was\+Damage\+Recently (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the player has recently received damage and before the Total\+Damage\+Wait\+Time expired. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Components/Health\+Component.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Components/Health\+Component.\+cpp\end{DoxyCompactItemize}

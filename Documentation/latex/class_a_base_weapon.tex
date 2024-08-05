@@ -1,0 +1,122 @@
+\doxysection{ABase\+Weapon Class Reference}
+\hypertarget{class_a_base_weapon}{}\label{class_a_base_weapon}\index{ABaseWeapon@{ABaseWeapon}}
+Inheritance diagram for ABase\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_base_weapon}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_base_weapon_a98d182ae0b09922cac693429f55be53b}{Get\+Damage}} () const
+\item 
+const FName \& \mbox{\hyperlink{class_a_base_weapon_aec11e4dd61eefd19371820fa57299dcc}{Get\+Socket\+Name}} () const
+\item 
+const \mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} \& \mbox{\hyperlink{class_a_base_weapon_a51de7ca8225adf387b7bed8488e42877}{Get\+Weapon\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_aef47c9107d917c16308b52390ec86612}{Level\+Up\+Weapon}} ()
+\item 
+int32 \mbox{\hyperlink{class_a_base_weapon_a090bd75c0eb6771c95ff953ef831e198}{Get\+Current\+Level}} () const
+\item 
+virtual void \mbox{\hyperlink{class_a_base_weapon_ae536b012ee728a6d9a336c01c16eef14}{On\+Actor\+Weapon\+Overlap}} (AActor \texorpdfstring{$\ast$}{*}Overlapped\+Actor, AActor \texorpdfstring{$\ast$}{*}Other\+Actor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_a7e9a5b11aff40c50a507b1f8057b9c41}{Setup\+Effects}} ()
+\item 
+\Hypertarget{class_a_base_weapon_a4a74e461d7c371a1d0ec9626d1325229}\label{class_a_base_weapon_a4a74e461d7c371a1d0ec9626d1325229} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_base_weapon_ad5d3c4b85ba1997f43401e54e0ec2b6a}\label{class_a_base_weapon_ad5d3c4b85ba1997f43401e54e0ec2b6a} 
+FName {\bfseries Socket\+Name}
+\item 
+\Hypertarget{class_a_base_weapon_aab9a5b133174f3eff67afb928065f18a}\label{class_a_base_weapon_aab9a5b133174f3eff67afb928065f18a} 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Ignore\+Class}
+\item 
+\Hypertarget{class_a_base_weapon_a82db708327de2e78d2a184d656ebd341}\label{class_a_base_weapon_a82db708327de2e78d2a184d656ebd341} 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Find\+To\+Damage\+Class}
+\item 
+\Hypertarget{class_a_base_weapon_aeb4a2ab8b328965378f295b4012c6300}\label{class_a_base_weapon_aeb4a2ab8b328965378f295b4012c6300} 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Init\+Sound}
+\item 
+\Hypertarget{class_a_base_weapon_acbeaa3a980a5b713cfa0e1a12054cb17}\label{class_a_base_weapon_acbeaa3a980a5b713cfa0e1a12054cb17} 
+\mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} {\bfseries Weapon\+Type}
+\item 
+\Hypertarget{class_a_base_weapon_a9d9542a1675f0b7af7575c4934514e0d}\label{class_a_base_weapon_a9d9542a1675f0b7af7575c4934514e0d} 
+\mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} {\bfseries Weapon\+Current\+Characteristics}
+\item 
+\Hypertarget{class_a_base_weapon_a04c39a62f3e8fb0361aa7367f309fc93}\label{class_a_base_weapon_a04c39a62f3e8fb0361aa7367f309fc93} 
+TArray$<$ \mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} $>$ {\bfseries Weapon\+Level\+Upgrades}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_base_weapon_a090bd75c0eb6771c95ff953ef831e198}\index{ABaseWeapon@{ABaseWeapon}!GetCurrentLevel@{GetCurrentLevel}}
+\index{GetCurrentLevel@{GetCurrentLevel}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{GetCurrentLevel()}{GetCurrentLevel()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_a090bd75c0eb6771c95ff953ef831e198} 
+int32 ABase\+Weapon\+::\+Get\+Current\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+current level weapon 
+\end{DoxyReturn}
+\Hypertarget{class_a_base_weapon_a98d182ae0b09922cac693429f55be53b}\index{ABaseWeapon@{ABaseWeapon}!GetDamage@{GetDamage}}
+\index{GetDamage@{GetDamage}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{GetDamage()}{GetDamage()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_a98d182ae0b09922cac693429f55be53b} 
+float ABase\+Weapon\+::\+Get\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Weapon Current Damage value 
+\end{DoxyReturn}
+\Hypertarget{class_a_base_weapon_aec11e4dd61eefd19371820fa57299dcc}\index{ABaseWeapon@{ABaseWeapon}!GetSocketName@{GetSocketName}}
+\index{GetSocketName@{GetSocketName}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{GetSocketName()}{GetSocketName()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_aec11e4dd61eefd19371820fa57299dcc} 
+const FName \& ABase\+Weapon\+::\+Get\+Socket\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Socket Name for Attach weapon 
+\end{DoxyReturn}
+\Hypertarget{class_a_base_weapon_a51de7ca8225adf387b7bed8488e42877}\index{ABaseWeapon@{ABaseWeapon}!GetWeaponType@{GetWeaponType}}
+\index{GetWeaponType@{GetWeaponType}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{GetWeaponType()}{GetWeaponType()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_a51de7ca8225adf387b7bed8488e42877} 
+const \mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} \& ABase\+Weapon\+::\+Get\+Weapon\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Weapon\+Type for widget sets 
+\end{DoxyReturn}
+\Hypertarget{class_a_base_weapon_aef47c9107d917c16308b52390ec86612}\index{ABaseWeapon@{ABaseWeapon}!LevelUpWeapon@{LevelUpWeapon}}
+\index{LevelUpWeapon@{LevelUpWeapon}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{LevelUpWeapon()}{LevelUpWeapon()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_aef47c9107d917c16308b52390ec86612} 
+void ABase\+Weapon\+::\+Level\+Up\+Weapon (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Level up Weapon\+Current\+Characteristics \Hypertarget{class_a_base_weapon_ae536b012ee728a6d9a336c01c16eef14}\index{ABaseWeapon@{ABaseWeapon}!OnActorWeaponOverlap@{OnActorWeaponOverlap}}
+\index{OnActorWeaponOverlap@{OnActorWeaponOverlap}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{OnActorWeaponOverlap()}{OnActorWeaponOverlap()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_ae536b012ee728a6d9a336c01c16eef14} 
+void ABase\+Weapon\+::\+On\+Actor\+Weapon\+Overlap (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Overlapped\+Actor}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+damage char when overlap actor 
+
+Reimplemented in \mbox{\hyperlink{class_a_unarmed_weapon_a1c5891c741340de7d7f82558bfc76bd8}{AUnarmed\+Weapon}}.
+
+\Hypertarget{class_a_base_weapon_a7e9a5b11aff40c50a507b1f8057b9c41}\index{ABaseWeapon@{ABaseWeapon}!SetupEffects@{SetupEffects}}
+\index{SetupEffects@{SetupEffects}!ABaseWeapon@{ABaseWeapon}}
+\doxysubsubsection{\texorpdfstring{SetupEffects()}{SetupEffects()}}
+{\footnotesize\ttfamily \label{class_a_base_weapon_a7e9a5b11aff40c50a507b1f8057b9c41} 
+void ABase\+Weapon\+::\+Setup\+Effects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+use in bp for update weapon effects 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Weapons/Base\+Weapon.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Weapons/Base\+Weapon.\+cpp\end{DoxyCompactItemize}

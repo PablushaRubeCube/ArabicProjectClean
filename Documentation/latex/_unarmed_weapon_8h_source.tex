@@ -1,0 +1,40 @@
+\doxysection{Unarmed\+Weapon.\+h}
+\hypertarget{_unarmed_weapon_8h_source}{}\label{_unarmed_weapon_8h_source}\index{Source/ChibaChaba/Public/Weapons/UnarmedWeapon.h@{Source/ChibaChaba/Public/Weapons/UnarmedWeapon.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Weapons/BaseWeapon.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}UnarmedWeapon.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }USphereComponent;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_unarmed_weapon}{AUnarmedWeapon}}\ :\ public\ \mbox{\hyperlink{class_a_base_weapon}{ABaseWeapon}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_a_unarmed_weapon}{AUnarmedWeapon}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Collision"{}})}
+\DoxyCodeLine{00021\ \ \ \ \ TObjectPtr<USphereComponent>\ WeaponCollision;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Weapon"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ DamageRate;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnActorWeaponOverlap(AActor*\ OverlappedActor,\ AActor*\ OtherActor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ Damage();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ FTimerHandle\ TimerDamage;}
+\DoxyCodeLine{00040\ \};}
+
+\end{DoxyCode}

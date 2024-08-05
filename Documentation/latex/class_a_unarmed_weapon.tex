@@ -1,0 +1,97 @@
+\doxysection{AUnarmed\+Weapon Class Reference}
+\hypertarget{class_a_unarmed_weapon}{}\label{class_a_unarmed_weapon}\index{AUnarmedWeapon@{AUnarmedWeapon}}
+Inheritance diagram for AUnarmed\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_unarmed_weapon}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_unarmed_weapon_a0e32ff9f4d9dadece26d1fee8994d746}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_unarmed_weapon_a1c5891c741340de7d7f82558bfc76bd8}{On\+Actor\+Weapon\+Overlap}} (AActor \texorpdfstring{$\ast$}{*}Overlapped\+Actor, AActor \texorpdfstring{$\ast$}{*}Other\+Actor) override
+\item 
+void \mbox{\hyperlink{class_a_unarmed_weapon_abc7f857ff078b8534869a3af076a117d}{Damage}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_a7e9a5b11aff40c50a507b1f8057b9c41}{Setup\+Effects}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_unarmed_weapon_a321099d2ed560a4786dd848ebc234fc2}\label{class_a_unarmed_weapon_a321099d2ed560a4786dd848ebc234fc2} 
+TObject\+Ptr$<$ USphere\+Component $>$ {\bfseries Weapon\+Collision}
+\item 
+\Hypertarget{class_a_unarmed_weapon_a497fbb46cc78bb11358d5a3964397933}\label{class_a_unarmed_weapon_a497fbb46cc78bb11358d5a3964397933} 
+float {\bfseries Damage\+Rate}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+FName {\bfseries Socket\+Name}
+\item 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Ignore\+Class}
+\item 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Find\+To\+Damage\+Class}
+\item 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Init\+Sound}
+\item 
+\mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} {\bfseries Weapon\+Type}
+\item 
+\mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} {\bfseries Weapon\+Current\+Characteristics}
+\item 
+TArray$<$ \mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} $>$ {\bfseries Weapon\+Level\+Upgrades}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_base_weapon_a98d182ae0b09922cac693429f55be53b}{Get\+Damage}} () const
+\item 
+const FName \& \mbox{\hyperlink{class_a_base_weapon_aec11e4dd61eefd19371820fa57299dcc}{Get\+Socket\+Name}} () const
+\item 
+const \mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} \& \mbox{\hyperlink{class_a_base_weapon_a51de7ca8225adf387b7bed8488e42877}{Get\+Weapon\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_aef47c9107d917c16308b52390ec86612}{Level\+Up\+Weapon}} ()
+\item 
+int32 \mbox{\hyperlink{class_a_base_weapon_a090bd75c0eb6771c95ff953ef831e198}{Get\+Current\+Level}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_unarmed_weapon_a0e32ff9f4d9dadece26d1fee8994d746}\index{AUnarmedWeapon@{AUnarmedWeapon}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AUnarmedWeapon@{AUnarmedWeapon}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_unarmed_weapon_a0e32ff9f4d9dadece26d1fee8994d746} 
+void AUnarmed\+Weapon\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}.
+
+\Hypertarget{class_a_unarmed_weapon_abc7f857ff078b8534869a3af076a117d}\index{AUnarmedWeapon@{AUnarmedWeapon}!Damage@{Damage}}
+\index{Damage@{Damage}!AUnarmedWeapon@{AUnarmedWeapon}}
+\doxysubsubsection{\texorpdfstring{Damage()}{Damage()}}
+{\footnotesize\ttfamily \label{class_a_unarmed_weapon_abc7f857ff078b8534869a3af076a117d} 
+void AUnarmed\+Weapon\+::\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+damage ovelaped actor \Hypertarget{class_a_unarmed_weapon_a1c5891c741340de7d7f82558bfc76bd8}\index{AUnarmedWeapon@{AUnarmedWeapon}!OnActorWeaponOverlap@{OnActorWeaponOverlap}}
+\index{OnActorWeaponOverlap@{OnActorWeaponOverlap}!AUnarmedWeapon@{AUnarmedWeapon}}
+\doxysubsubsection{\texorpdfstring{OnActorWeaponOverlap()}{OnActorWeaponOverlap()}}
+{\footnotesize\ttfamily \label{class_a_unarmed_weapon_a1c5891c741340de7d7f82558bfc76bd8} 
+void AUnarmed\+Weapon\+::\+On\+Actor\+Weapon\+Overlap (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Overlapped\+Actor}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+override func that start Timer\+Damage for delay damage 
+
+Reimplemented from \mbox{\hyperlink{class_a_base_weapon_ae536b012ee728a6d9a336c01c16eef14}{ABase\+Weapon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Weapons/Unarmed\+Weapon.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Weapons/Unarmed\+Weapon.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\doxysection{Item\+\_\+\+Pickup.\+h}
+\hypertarget{_item___pickup_8h_source}{}\label{_item___pickup_8h_source}\index{Source/ChibaChaba/Public/Items/Pickup/Item\_Pickup.h@{Source/ChibaChaba/Public/Items/Pickup/Item\_Pickup.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Items/Item.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Item\_Pickup.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UCurveFloat;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_player_character}{APlayerCharacter}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }USphereComponent;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }UNiagaraComponent;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }UNiagaraSystem;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }USoundBase;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ UCLASS()}
+\DoxyCodeLine{00017\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_item___pickup}{AItem\_Pickup}}\ :\ public\ \mbox{\hyperlink{class_a_item}{AItem}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_a_item___pickup}{AItem\_Pickup}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ FTimerHandle\ TimerHandle;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}MoveItem"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ TimerRate;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}MoveItem"{}})}
+\DoxyCodeLine{00031\ \ \ \ \ TObjectPtr<UCurveFloat>\ MoveItemCurve;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}MoveItem"{}})}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ TotalTimeMove;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00037\ \ \ \ \ TObjectPtr<APlayerCharacter>\ PlayerChar;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Overlap"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ TObjectPtr<USphereComponent>\ OverlapSphere;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Pickup"{}},\ meta\ =\ (BlueprintProtected))}
+\DoxyCodeLine{00043\ \ \ \ \ TObjectPtr<UNiagaraComponent>\ NiagaraPickup;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Pickup"{}})}
+\DoxyCodeLine{00046\ \ \ \ \ TObjectPtr<UNiagaraSystem>\ OverlapParticle;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Pickup"{}})}
+\DoxyCodeLine{00049\ \ \ \ \ TObjectPtr<USoundBase>\ PickupSound;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnSphereBeginOverlap(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ bFromSweep,\ \textcolor{keyword}{const}\ FHitResult\&\ SweepResult);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ FinishAction();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ TimerStart;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ FVector\ OverlapItemLocation;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ PickupItem();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveToTarget();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetMoveItemLocations();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateMove(\textcolor{keyword}{const}\ FVector\&\ StartLocation,\ \textcolor{keyword}{const}\ FVector\&\ FinishLocation,\ \textcolor{keyword}{const}\ UCurveFloat*\ Curve);}
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

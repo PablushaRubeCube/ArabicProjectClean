@@ -1,0 +1,79 @@
+\doxysection{APhysical\+Weapon Class Reference}
+\hypertarget{class_a_physical_weapon}{}\label{class_a_physical_weapon}\index{APhysicalWeapon@{APhysicalWeapon}}
+Inheritance diagram for APhysical\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_physical_weapon}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_physical_weapon_a22ad75123e3b75d60da923a56d6ac207}{Begin\+Play}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_a7e9a5b11aff40c50a507b1f8057b9c41}{Setup\+Effects}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_physical_weapon_af3b2761166eac1ec841527ecd55501fa}\label{class_a_physical_weapon_af3b2761166eac1ec841527ecd55501fa} 
+TObject\+Ptr$<$ USkeletal\+Mesh\+Component $>$ {\bfseries Weapon\+Mesh}
+\item 
+\Hypertarget{class_a_physical_weapon_adfda895a1e2f2af518519b05cfdddec8}\label{class_a_physical_weapon_adfda895a1e2f2af518519b05cfdddec8} 
+TObject\+Ptr$<$ UBox\+Component $>$ {\bfseries Weapon\+Collision}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+FName {\bfseries Socket\+Name}
+\item 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Ignore\+Class}
+\item 
+TSubclass\+Of$<$ AActor $>$ {\bfseries Find\+To\+Damage\+Class}
+\item 
+TObject\+Ptr$<$ USound\+Base $>$ {\bfseries Init\+Sound}
+\item 
+\mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} {\bfseries Weapon\+Type}
+\item 
+\mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} {\bfseries Weapon\+Current\+Characteristics}
+\item 
+TArray$<$ \mbox{\hyperlink{struct_f_weapon_characteristics}{FWeapon\+Characteristics}} $>$ {\bfseries Weapon\+Level\+Upgrades}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_base_weapon_a98d182ae0b09922cac693429f55be53b}{Get\+Damage}} () const
+\item 
+const FName \& \mbox{\hyperlink{class_a_base_weapon_aec11e4dd61eefd19371820fa57299dcc}{Get\+Socket\+Name}} () const
+\item 
+const \mbox{\hyperlink{struct_f_weapons_type}{FWeapons\+Type}} \& \mbox{\hyperlink{class_a_base_weapon_a51de7ca8225adf387b7bed8488e42877}{Get\+Weapon\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_a_base_weapon_aef47c9107d917c16308b52390ec86612}{Level\+Up\+Weapon}} ()
+\item 
+int32 \mbox{\hyperlink{class_a_base_weapon_a090bd75c0eb6771c95ff953ef831e198}{Get\+Current\+Level}} () const
+\item 
+virtual void \mbox{\hyperlink{class_a_base_weapon_ae536b012ee728a6d9a336c01c16eef14}{On\+Actor\+Weapon\+Overlap}} (AActor \texorpdfstring{$\ast$}{*}Overlapped\+Actor, AActor \texorpdfstring{$\ast$}{*}Other\+Actor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_physical_weapon_a22ad75123e3b75d60da923a56d6ac207}\index{APhysicalWeapon@{APhysicalWeapon}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!APhysicalWeapon@{APhysicalWeapon}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_physical_weapon_a22ad75123e3b75d60da923a56d6ac207} 
+void APhysical\+Weapon\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_base_weapon}{ABase\+Weapon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Chiba\+Chaba/\+Public/\+Weapons/Physical\+Weapon.\+h\item 
+Source/\+Chiba\+Chaba/\+Private/\+Weapons/Physical\+Weapon.\+cpp\end{DoxyCompactItemize}

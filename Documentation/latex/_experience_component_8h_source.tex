@@ -1,0 +1,55 @@
+\doxysection{Experience\+Component.\+h}
+\hypertarget{_experience_component_8h_source}{}\label{_experience_component_8h_source}\index{Source/ChibaChaba/Public/Components/ExperienceComponent.h@{Source/ChibaChaba/Public/Components/ExperienceComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Components/ActorComponent.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ExperienceComponent.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }USoundBase;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS(ClassGroup\ =\ (Custom),\ meta\ =\ (BlueprintSpawnableComponent))}
+\DoxyCodeLine{00012\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_u_experience_component}{UExperienceComponent}}\ :\ public\ UActorComponent}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_u_experience_component}{UExperienceComponent}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ AddExperience(\textcolor{keywordtype}{float}\ Exp);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ GetExperience()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ UFUNCTION(BlueprintPure)}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ GetExperiencePercent()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ Experience;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ int32\ CurrentLevel;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ StartExperienceToLevelUp;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ LevelGainRate;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Experience"{}})}
+\DoxyCodeLine{00050\ \ \ \ \ TObjectPtr<USoundBase>\ LevelUpSound;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ ExperienceToNextLevel;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ LevelUp();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ CalculeteExperienceToNextLevel(int32\ Lvl);}
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

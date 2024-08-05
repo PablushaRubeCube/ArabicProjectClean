@@ -1,0 +1,74 @@
+\doxysection{Spawn\+Component.\+h}
+\hypertarget{_spawn_component_8h_source}{}\label{_spawn_component_8h_source}\index{Source/ChibaChaba/Public/Components/SpawnComponent.h@{Source/ChibaChaba/Public/Components/SpawnComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Components/ActorComponent.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ChiChaCoreTypes.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}SpawnComponent.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_enemy_character}{AEnemyCharacter}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }UBehaviorTree;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_player_character}{APlayerCharacter}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ UCLASS(ClassGroup\ =\ (Custom),\ meta\ =\ (BlueprintSpawnableComponent))}
+\DoxyCodeLine{00015\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_u_spawn_component}{USpawnComponent}}\ :\ public\ UActorComponent}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_u_spawn_component}{USpawnComponent}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ StartSpawnBots();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ int32\ NumBots;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00032\ \ \ \ \ FVector2D\ RadiusSpawn;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00035\ \ \ \ \ TSubclassOf<AEnemyCharacter>\ EnemyCharacter;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ TObjectPtr<UBehaviorTree>\ BT;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ BotsNumGainRate;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}AI"{}})}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ SpawnRate;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00050\ \ \ \ \ TObjectPtr<APlayerCharacter>\ PlayerChar;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ FTimerHandle\ SpawnTimerHandler;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ int32\ CountWave;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ SpawnBots();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ FVector\ GetSpawnLocation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ GetSpawnLocationInNavMesh(FVector\&\ SpawnLocation,\ \textcolor{keyword}{const}\ FBox\&\ NavBounds)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ GetRandomSpawnRadius()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ FBox\ GetNavMeshBounds()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsWithinNavMeshBounds(\textcolor{keyword}{const}\ FVector\&\ SpawnLocation,\ \textcolor{keyword}{const}\ FBox\&\ NavBounds)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ int32\ IncrementNextNumBotsWave(int32\ LevelWave);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ StopSpawnBots(EGameStates\ State);}
+\DoxyCodeLine{00102\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,43 @@
+\doxysection{Enemy\+Character.\+h}
+\hypertarget{_enemy_character_8h_source}{}\label{_enemy_character_8h_source}\index{Source/ChibaChaba/Public/Characters/Enemy/EnemyCharacter.h@{Source/ChibaChaba/Public/Characters/Enemy/EnemyCharacter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Characters/BaseCharacter.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}EnemyCharacter.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_item___pickup}{AItem\_Pickup}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ CHIBACHABA\_API\ \mbox{\hyperlink{class_a_enemy_character}{AEnemyCharacter}}\ :\ public\ \mbox{\hyperlink{class_a_base_character}{ABaseCharacter}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_a_enemy_character}{AEnemyCharacter}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Death()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Movement"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ FVector2D\ RandomMaxSpeedRange;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ todo\ make\ limits\ 1.0f}}
+\DoxyCodeLine{00029\ \ \ \ \ UPROPERTY(EditAnywhere,\ Category\ =\ \textcolor{stringliteral}{"{}Item"{}})}
+\DoxyCodeLine{00030\ \ \ \ \ TMap<TSubclassOf<AItem\_Pickup>,\ \textcolor{keywordtype}{float}>\ ItemToDrops;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ GetRandomMaxSpeed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ DropLoot()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ TSubclassOf<AItem\_Pickup>\ GetRandomDroop()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,95 @@
+\doxysection{Test\+Utils.\+h}
+\hypertarget{_test_utils_8h_source}{}\label{_test_utils_8h_source}\index{Source/ChibaChaba/Public/Tests/TestUtils.h@{Source/ChibaChaba/Public/Tests/TestUtils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#if\ WITH\_AUTOMATION\_TESTS}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Tests/PlayerCharacter\_Test.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputComponent.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }TestUtils}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ MoveCharacter(\mbox{\hyperlink{class_a_player_character___test}{APlayerCharacter\_Test}}*\ Char,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ StartTime)}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ NewTime\ =\ FPlatformTime::Seconds();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (NewTime\ -\/\ StartTime\ <=\ 5.0f)\ \ \textcolor{comment}{//\ Checking\ the\ past\ tense}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ FInputActionValue\ InputActionValue\ =\ FVector2D(1.0f,\ 0.0f);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ Char-\/>\mbox{\hyperlink{class_a_player_character_ad97c172553c15895cffd3b4d7bcb8bd8}{Move}}(InputActionValue);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ We\ continue\ calling\ the\ function\ for\ 5\ seconds}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ Successfully\ complete\ the\ latent\ command\ after\ 5\ seconds}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{static}\ UWorld*\ GetTestGameWorld()}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ UWorld*\ TestWorld\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ TIndirectArray<FWorldContext>\&\ WorldContexts\ =\ GEngine-\/>GetWorldContexts();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ FWorldContext\&\ Context\ :\ WorldContexts)}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((Context.WorldType\ ==\ EWorldType::PIE)\ ||\ (Context.WorldType\ ==\ EWorldType::Game))\ \&\&\ (Context.World()\ !=\ NULL))}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ TestWorld\ =\ Context.World();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (!TestWorld)}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ UE\_LOG(LogTemp,\ Error,\ TEXT(\textcolor{stringliteral}{"{}Test\ game\ world\ not\ found."{}}));}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{return}\ TestWorld;}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ FindAction(\textcolor{keyword}{const}\ UInputComponent*\ InputComponent,\ \textcolor{keyword}{const}\ ETriggerEvent\&\ FindTriggerEvent,\ \textcolor{keyword}{const}\ FString\&\ FindActionName)}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{const}\ UEnhancedInputComponent*\ InputComp\ =\ CastChecked<UEnhancedInputComponent>(InputComponent);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ ActionBinding\ :\ InputComp-\/>GetActionEventBindings())}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ ETriggerEvent\ TriggerEvent\ =\ ActionBinding-\/>GetTriggerEvent();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ ActionName\ =\ ActionBinding-\/>GetAction()-\/>GetName();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TriggerEvent\ ==\ FindTriggerEvent\ \&\&\ ActionName\ ==\ FindActionName)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00091\ T*\ FindActorOfClass(\textcolor{keyword}{const}\ UWorld*\ World,\ TSubclassOf<AActor>\ ActorClass)}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ TArray<AActor*>\ AllActorsOfClass;}
+\DoxyCodeLine{00094\ \ \ \ \ UGameplayStatics::GetAllActorsOfClass(World,\ ActorClass,\ AllActorsOfClass);}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (AllActorsOfClass.Num()\ ==\ 0)}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ UE\_LOG(LogTemp,\ Error,\ TEXT(\textcolor{stringliteral}{"{}No\ actors\ of\ class\ \%s\ found\ in\ the\ map"{}}),\ *ActorClass-\/>GetName());}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}*\ Actor\ :\ AllActorsOfClass)}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ T*\ TypedActor\ =\ Cast<T>(Actor);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TypedActor)\ \textcolor{keywordflow}{return}\ TypedActor;}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ UE\_LOG(LogTemp,\ Error,\ TEXT(\textcolor{stringliteral}{"{}Actor\ of\ class\ \%s\ not\ found"{}}),\ *ActorClass-\/>GetName());}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
