@@ -43,10 +43,21 @@ bool SpawnMaxLevelWeapon(const FString& WeaponName, UWeaponComponent* WeaponComp
 		UE_LOG(Test_Weapons, Warning, TEXT("BPWeapon can't loadObject"));
 		return false;
 	}
-	const TSubclassOf<ABaseWeapon> WeaponClass = BPWeapon->GeneratedClass;
+
+	UClass* GeneratedClass = BPWeapon->GeneratedClass;
+
+	// Check if GeneratedClass is a descendant of ABaseWeapon
+	if (!GeneratedClass || !GeneratedClass->IsChildOf(ABaseWeapon::StaticClass()))
+	{
+		UE_LOG(Test_Weapons, Warning, TEXT("GeneratedClass is not derived from ABaseWeapon or is invalid"));
+		return false;
+	}
+
+	const TSubclassOf<ABaseWeapon> WeaponClass = TSubclassOf<ABaseWeapon>(GeneratedClass);
+
 	if (!WeaponClass)
 	{
-		UE_LOG(Test_Weapons, Warning, TEXT("WeaponClass not Exists or is not derived from ABaseWeapon"));
+		UE_LOG(Test_Weapons, Warning, TEXT("WeaponClass is invalid after conversion"));
 		return false;
 	}
 
