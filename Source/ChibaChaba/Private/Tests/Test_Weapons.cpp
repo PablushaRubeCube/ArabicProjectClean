@@ -110,6 +110,9 @@ bool FWeaponArrowSpawnLvUpKill::RunTest(const FString& Parameters)
 				UE_LOG(LogTemp, Warning, TEXT("World context is not valid"));
 				return true;
 			}
+
+			CollectGarbage(GARBAGE_COLLECTION_KEEPFLAGS);
+
 			TArray<AActor*> OutActorsOfClass;
 			UGameplayStatics::GetAllActorsOfClass(World, AEnemyCharacter::StaticClass(), OutActorsOfClass);
 			TestEqual("Enemy don't die yet", OutActorsOfClass.Num(), 0);

@@ -1,5 +1,7 @@
 // Arabic Game. Copyright by Maksim Kremnev. All Rights Reserved.
 
+#if WITH_AUTOMATION_TESTS
+
 #include "Tests/Test_Components.h"
 #include "CoreMinimal.h"
 #include "Tests/AutomationCommon.h"
@@ -63,3 +65,5 @@ bool FSpawnBots::RunTest(const FString& Paramets)
 
 	return true;
 }
+
+#endif
