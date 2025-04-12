@@ -11,7 +11,7 @@ We are using it for training, testing and documentation in Unreal Engine.
 
 ## Info
 
-The project was done in my free time over the course of 3 months. More than **1200** lines of code with **90%** test coverage. The project has **bat** files for utomatic generation of documentation and tests.
+The project was done in my free time. More than **1200** lines of code with **90%** test coverage. The project has **bat** files for utomatic generation of documentation and tests.
 
 The main part is made in С++. Simple AI, derived weapon classes and simple widgets are implemented in BP. There are also some TODO in BP that need to be transferred to С++. TODO in С++ are mainly related to optimization of spawn enemy. Since this project is aimed at working with testing and documentation, and not creating a full-fledged game, these methods may not be finished.
 
